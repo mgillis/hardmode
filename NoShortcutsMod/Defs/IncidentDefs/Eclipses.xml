@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- eclipses are hardcoded to be not very dark so they're disabled w/chance = 0 -->
+  <!-- credit to existing Darkness mod to pointing this out -->
+  <IncidentDef>
+    <defName>Eclipse</defName>
+    <WorkerClass>IncidentWorker_Eclipse</WorkerClass>
+    <chance>0</chance>
+    <minRefireDays>30</minRefireDays>
+    <favorability>Bad</favorability>
+  </IncidentDef>
+
+</Defs>

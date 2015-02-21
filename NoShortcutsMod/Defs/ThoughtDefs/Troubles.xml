@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ThoughtDefs>
+  
+  <!-- optimism? pffffffff -->
+  <ThoughtDef>
+    <defName>NewColonyOptimism</defName>
+    <duration>120000</duration>
+    <nextThought>FadingAdrenaline</nextThought>
+    <stages>
+      <li>
+        <label>adrenaline</label>
+        <description>I don't have time to think. We have to survive.</description>
+        <baseMoodEffect>12</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>FadingAdrenaline</defName>
+    <duration>180000</duration>
+    <stages>
+      <li>
+        <label>adrenaline</label>
+        <description>We've been here a while. The shock is wearing off...</description>
+        <baseMoodEffect>6</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+</ThoughtDefs>

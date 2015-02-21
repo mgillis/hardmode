@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<WorkGivers>
+
+  <WorkGiverDef>
+    <defName>Mine</defName>
+    <giverClass>HardMode.WorkGiver_Miner</giverClass>
+    <workType>Mining</workType>
+    <verb>mine</verb>
+    <gerund>mining</gerund>
+    <requiredActivities>
+      <li>Manipulation</li>
+    </requiredActivities>
+  </WorkGiverDef>
+
+  <WorkGiverDef>
+    <defName>DoBillsCookOnFire</defName>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Cooking</workType>
+    <priorityInType>100</priorityInType>
+    <singleBillGiverDef>Campfire</singleBillGiverDef>
+    <verb>cook</verb>
+    <gerund>cooking</gerund>
+    <requiredActivities>
+      <li>Manipulation</li>
+    </requiredActivities>
+  </WorkGiverDef>
+  
+</WorkGivers>

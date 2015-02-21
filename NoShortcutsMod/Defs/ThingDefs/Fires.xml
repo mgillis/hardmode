@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ThingDefs>
+  <ThingDef Name="FireBase" Abstract="True">
+    <category>Building</category>
+    <eType>BuildingComplex</eType>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <selectable>true</selectable>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <repairEffect>Repair</repairEffect>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <filthLeaving>BuildingRubble</filthLeaving>
+    <thingClass>HardMode.Building_FireBase</thingClass>
+    <drawerType>RealtimeOnly</drawerType>
+    <passability>Impassable</passability>
+    <placeWorkers>
+      <li>PlaceWorker_Heater</li>
+    </placeWorkers>
+    <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+    <itemSurface>True</itemSurface>
+    <recipes>
+      <li>CookMealSimple</li>
+    </recipes>
+    <building>
+      <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+      <heatPerTickWhileWorking>0.35</heatPerTickWhileWorking>
+    </building>
+    <hasInteractionCell>true</hasInteractionCell>
+    <interactionSquareOffset>(0,0,-1)</interactionSquareOffset>
+    <inspectorTabs>
+      <li>ITab_Bills</li>
+    </inspectorTabs>
+  </ThingDef>
+
+  <ThingDef ParentName="FireBase">
+    <defName>Campfire</defName>
+    <label>campfire</label>
+    <description>A temporary but useful heat source which burns for a few days. It can be used to cook basic meals. As with all heat sources, it must be placed indoors so it has a closed space to heat.</description>
+    <graphicPath>Things/Building/Misc/Campfire</graphicPath>
+    <graphicClass>Graphic_Single</graphicClass>
+    <altitudeLayer>FloorEmplacement</altitudeLayer>
+    <pathCost>70</pathCost>
+    <constructEffect>ConstructDirt</constructEffect>
+    <tickerType>Normal</tickerType>
+    <statBases>
+      <MaxHealth>80</MaxHealth>
+      <WorkToMake>200</WorkToMake>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <size>(1,1)</size>
+    <interactionSquareOffset>(0,0,1)</interactionSquareOffset>
+    <costList>
+      <WoodLog>35</WoodLog>
+    </costList>
+    <soundImpactDefault>BulletImpactGround</soundImpactDefault>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <comps>
+      <li>
+        <compClass>CompGlower</compClass>
+        <glowRadius>10</glowRadius>
+        <glowColor>(252,187,113,0)</glowColor>
+      </li>
+      <li>
+        <compClass>CompHeatPusher</compClass>
+        <heatPerSecond>22</heatPerSecond>
+        <heatPushMaxTemperature>28</heatPushMaxTemperature>
+      </li>
+      <li>
+        <compClass>CompGatherSpot</compClass>
+      </li>
+      <li>
+        <compClass>CompLifespan</compClass>
+        <lifespanTicks>40000</lifespanTicks>
+      </li>
+    </comps>
+    <rotatable>false</rotatable>
+    <designationHotKey>I</designationHotKey>
+    <designationCategory>Production</designationCategory>
+  </ThingDef>
+  
+</ThingDefs>

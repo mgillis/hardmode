@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResearchProjectDefs>
+  
+<ResearchProjectDef>
+  <defName>Mining</defName>
+  <label>mining</label>
+  <description>Jury-rigged electric mining tools made out of scraps from your escape pods.</description>
+  <totalCost>400</totalCost>
+  <prerequisites></prerequisites>
+</ResearchProjectDef>
+
+</ResearchProjectDefs>
