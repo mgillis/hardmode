@@ -9,7 +9,7 @@
     <repairEffect>Repair</repairEffect>
     <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
     <filthLeaving>BuildingRubble</filthLeaving>
-    <thingClass>HardMode.Building_FireBase</thingClass>
+    <thingClass>HardMode.Buildings.Building_FireBase</thingClass>
     <drawerType>RealtimeOnly</drawerType>
     <passability>Impassable</passability>
     <placeWorkers>

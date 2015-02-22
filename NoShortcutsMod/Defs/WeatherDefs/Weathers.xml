@@ -1,5 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <WeatherDefs>
+  <!-- no HardMode classes in this file -->
+
 
   <WeatherDef Name="ClearSky" Abstract="true">
     <screenSaturation>1.25</screenSaturation>
@@ -14,12 +16,12 @@
       <overlay>(0.75,0.75,0.75)</overlay>
     </skyColorsDusk>
     <skyColorsNightEdge>
-      <sky>(0.125,0.1,0.25)</sky>
+      <sky>(0.1,0.1,0.20)</sky>
       <shadow>(0.95,0.95,1.0)</shadow>
       <overlay>(0.3,0.3,0.4)</overlay>
     </skyColorsNightEdge>
     <skyColorsNightMid>
-      <sky>(0.125,0.1,0.25)</sky>
+      <sky>(0.1,0.1,0.20)</sky>
       <shadow>(0.95,0.95,1.0)</shadow>
       <overlay>(0.3,0.3,0.4)</overlay>
     </skyColorsNightMid>
@@ -38,12 +40,12 @@
       <overlay>(0.5,0.5,0.5)</overlay>
     </skyColorsDusk>
     <skyColorsNightEdge>
-      <sky>(0.125,0.1,0.18)</sky>
+      <sky>(0.05,0.05,0.05)</sky>
       <shadow>(1,1,1)</shadow>
       <overlay>(0.3,0.3,0.4)</overlay>
     </skyColorsNightEdge>
     <skyColorsNightMid>
-      <sky>(0.125,0.1,0.18)</sky>
+      <sky>(0.05,0.05,0.05)</sky>
       <shadow>(1,1,1)</shadow>
       <overlay>(0.3,0.3,0.4)</overlay>
     </skyColorsNightMid>

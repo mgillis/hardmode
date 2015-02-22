@@ -3,27 +3,32 @@ using RimWorld;
 using Verse;
 using Verse.AI;
 
-namespace HardMode
+namespace HardMode.Jobs
 {
-  public class JobGiver_SeekLight : ThinkNode_JobGiver
-  {
-    protected override Job TryGiveTerminalJob(Pawn pawn)
+    public class JobGiver_SeekLight : ThinkNode_JobGiver
     {
-        if (!pawn.Position.IsPsychDark())
-            return null;
+        private const int searchRadius = 40;
 
-        Log.Message("trying to find brighter spot for " + pawn);
+        protected override Job TryGiveTerminalJob(Pawn pawn)
+        {
+            if (!pawn.Position.IsPsychDark())
+                return null;
 
-        var brightSpot = pawn.RandomCloseReachableSpotWith(c => !c.IsPsychDark());
+            Log.Message("trying to find brighter spot for " + pawn);
 
-        Log.Message("found spot " + brightSpot);
-        
-        if (brightSpot != IntVec3.Invalid)
-            return new Job(JobDefOf.Goto, brightSpot);
+            var brightSpot = pawn.RandomCloseReachableSpotWith(c => !c.IsPsychDark(), searchRadius);
 
-        return null;
+            if (brightSpot != IntVec3.Invalid)
+            {
+                Log.Message("found spot " + brightSpot);
+                return new Job(JobDefOf.Goto, brightSpot);
+            }
+            else
+            {
+                Log.Message("no brighter spot");
+                return null;
+            }
+
+        }
     }
-
-  }
 }
-

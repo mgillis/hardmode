@@ -17,7 +17,7 @@
     <DebugSymbols>false</DebugSymbols>
     <DebugType>none</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>C:\Rimworld\RimWorld724Win\Mods\HardMode\</OutputPath>
+    <OutputPath>C:\Rimworld\RimWorld725Win\Mods\HardMode\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -48,23 +48,46 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Buildings\Building_FireBase.cs" />
+    <Compile Include="Jobs\JobDriver_UseToolOn.cs" />
     <Compile Include="Jobs\JobGiver_SeekLight.cs" />
+    <Compile Include="Things\Tool.cs" />
     <Compile Include="Utility\Extensions.cs" />
     <Compile Include="Buildings\Mineable.cs" />
     <Compile Include="Utility\CellUtilities.cs" />
     <Compile Include="Utility\JobUtilities.cs" />
-    <Compile Include="WorkGivers\WorkGiver_Miner.cs" />
+    <Compile Include="Verbs\Verb_MineWithTool.cs" />
+    <Compile Include="Verbs\Verb_UseTool.cs" />
+    <Compile Include="WorkGivers\WorkGiver_MineWithTool.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="About\About.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Defs\EffecterDefs\Effecters.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Defs\IncidentDefs\Eclipses.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Defs\JobDefs\ToolJobs.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Defs\MapGeneratorDefs\MapGenWithTools.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Defs\ResearchProjectDefs\Research.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Defs\SoundDefs\WorkSounds.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Defs\ThingCategoryDefs\ThingCategories.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Defs\ThingDefs\Tools.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
     </Content>
     <Content Include="Defs\ThingDefs\Fires.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -72,7 +95,9 @@
     <Content Include="Defs\ThingDefs\Mineables.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Defs\ThinkTreeDefs\Hooks.xml" />
+    <Content Include="Defs\ThinkTreeDefs\Hooks.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Defs\ThoughtDefs\Troubles.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -82,6 +107,7 @@
     <Content Include="Defs\WorkGiverDefs\WorkGivers.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Compile Include="Gensteps\Genstep_Tools.cs" />
     <Content Include="readme.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -89,9 +115,9 @@
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>del /y /q "$(TargetDir)Assemblies"
+    <PostBuildEvent>rmdir /s /q "$(TargetDir)Assemblies"
 mkdir "$(TargetDir)Assemblies"
-move /y "$(TargetDir)$(TargetName).*" "$(TargetDir)Assemblies"
+move "$(TargetDir)$(TargetName).dll" "$(TargetDir)Assemblies"
 </PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

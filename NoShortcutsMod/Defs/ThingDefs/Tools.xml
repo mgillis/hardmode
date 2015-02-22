@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ThingDefs>
+ 
+  <ThingDef Name="ToolBase" Abstract="True">
+    <category>Item</category>
+    <eType>Equipment</eType>
+    <thingClass>HardMode.Things.Tool</thingClass>
+    
+    <!-- This should probably be secondary, I don't know. This is mean. But the code can't handle Secondary equipment yet. -->
+    <equipmentType>Primary</equipmentType>
+    
+    <pathCost>10</pathCost>
+    <useStandardHealth>True</useStandardHealth>
+    <selectable>True</selectable>
+    <onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <statBases>
+      <MaxHealth>100</MaxHealth>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>0.5</DeteriorationRate>
+      <SellPriceFactor>0.5</SellPriceFactor>
+    </statBases>
+    <altitudeLayer>Item</altitudeLayer>
+    <alwaysHaulable>True</alwaysHaulable>
+    <tickerType>Never</tickerType>
+    <weaponTags>
+      <li>Melee</li>
+    </weaponTags>
+    <thingCategories>
+      <li>Tools</li>
+    </thingCategories>
+    <comps>
+      <li>
+        <compClass>CompForbiddable</compClass>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="ToolBase">
+    <defName>Tool_LaserTool</defName>
+    <label>laser multitool</label>
+    <description>The engineer's best friend, and now yours too, the laser multitool can cut and weld a surprising variety of materials.</description>
+    <graphicPath>Things/Item/Equipment/WeaponRanged/ChargeLance</graphicPath>
+    <graphicClass>Graphic_Single</graphicClass>
+    <soundInteract>InteractChargeRifle</soundInteract>
+    <stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories>
+    <techLevel>Spacer</techLevel>
+    <verbs>
+      <li>
+        <verbClass>HardMode.Verbs.Verb_MineWithTool</verbClass>
+        <hasStandardCommand>false</hasStandardCommand>
+        <onlyManualCast>true</onlyManualCast>
+        <warmupTicks>35</warmupTicks>
+      </li>
+    </verbs>
+  </ThingDef>
+    
+</ThingDefs>

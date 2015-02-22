@@ -37,14 +37,14 @@ namespace HardMode.Utility
 
         public static bool IsPsychDark(this IntVec3 position)
         {
-            return PsychGlowAt(position) != PsychGlow.Dark;
+            return PsychGlowAt(position) == PsychGlow.Dark;
         }
         #endregion
 
         #region Pawn
-        public static IntVec3 RandomCloseReachableSpotWith(this Pawn pawn, Predicate<IntVec3> validator)
+        public static IntVec3 RandomCloseReachableSpotWith(this Pawn pawn, Predicate<IntVec3> validator, int maxRadius)
         {
-            return CellUtilities.RandomCloseReachableSpotWith(pawn, validator);
+            return CellUtilities.RandomCloseReachableSpotWith(pawn, validator, maxRadius);
         }
         #endregion
     }

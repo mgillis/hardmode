@@ -1,6 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
+  <!-- no HardMode classes in this file -->
+  
   <!-- eclipses are hardcoded to be not very dark so they're disabled w/chance = 0 -->
   <!-- credit to existing Darkness mod to pointing this out -->
   <IncidentDef>

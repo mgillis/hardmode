@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ThingCategoryDefs>
+  <!-- no HardMode classes in this file -->
+  
+  <ThingCategoryDef>
+    <defName>Tools</defName>
+    <label>tools</label>
+    <parent>Root</parent>
+  </ThingCategoryDef>
+</ThingCategoryDefs>

@@ -4,7 +4,7 @@ using UnityEngine;
 using Verse;
 using Verse.Sound;
 
-namespace HardMode
+namespace HardMode.Buildings
 {
     class Mineable : Building
     {

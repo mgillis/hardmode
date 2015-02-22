@@ -3,7 +3,7 @@
 
   <WorkGiverDef>
     <defName>Mine</defName>
-    <giverClass>HardMode.WorkGiver_Miner</giverClass>
+    <giverClass>HardMode.WorkGivers.WorkGiver_MineWithTool</giverClass>
     <workType>Mining</workType>
     <verb>mine</verb>
     <gerund>mining</gerund>

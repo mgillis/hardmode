@@ -5,7 +5,7 @@
     <defName>InsertHookTest</defName>
     <insertTag>Humanoid_PreSatisfyNeeds</insertTag>
     <insertPriority>100</insertPriority>
-    <thinkRoot Class="HardMode.JobGiver_SeekLight" />
+    <thinkRoot Class="HardMode.Jobs.JobGiver_SeekLight" />
   </ThinkTreeDef>
   
 </ThinkTreeHooks>

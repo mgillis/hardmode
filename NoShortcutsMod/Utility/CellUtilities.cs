@@ -38,30 +38,30 @@ namespace HardMode.Utility
                 .FirstOrDefault();
         }
 
-        public static IntVec3 RandomCloseSpotWith(IntVec3 start, Predicate<IntVec3> validator)
+        public static IntVec3 RandomCloseSpotWith(IntVec3 start, Predicate<IntVec3> validator, int maxRadius = 120, int radiusStep = 5)
         {
-            var squareRadius = 0;
-            var foundSq = IntVec3.Invalid;
-
-            for (var searches = 0; searches < 30; searches++)
+            for (var squareRadius = radiusStep; squareRadius < maxRadius; squareRadius += radiusStep)
             {
-                squareRadius += 4;
-                if (GenCellFinder.TryFindRandomMapCellNearWith(start, squareRadius, validator, out foundSq))
+                Log.Message("searching with squareRadius " + squareRadius);
+                IntVec3 foundCell;
+                if (GenCellFinder.TryFindRandomMapCellNearWith(start, squareRadius, validator, out foundCell))
                 {
-                    return foundSq;
+                    Log.Message("found cell, returning");
+                    return foundCell;
                 }
             }
-            return foundSq;
+            Log.Message("nothing, returning Invalid");
+            return IntVec3.Invalid;
 
         }
 
-        public static IntVec3 RandomCloseReachableSpotWith(Pawn pawn, Predicate<IntVec3> validator)
+        public static IntVec3 RandomCloseReachableSpotWith(Pawn pawn, Predicate<IntVec3> validator, int maxRadius = 120)
         {
             Predicate<IntVec3> combined = c => validator(c) && 
                     c.Standable() && 
                     !Find.PawnDestinationManager.DestinationIsReserved(c) && 
                     pawn.CanReach(c, PathMode.OnCell, Danger.Some);
-            return RandomCloseSpotWith(pawn.Position, combined);
+            return RandomCloseSpotWith(pawn.Position, combined, maxRadius);
         }
     }
 }

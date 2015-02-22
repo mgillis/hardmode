@@ -10,7 +10,7 @@
 
   <ThingDef Name="RockBase" ParentName="BuildingNaturalBase" Abstract="True" >
     <eType>Rock</eType>
-    <thingClass>HardMode.Mineable</thingClass>
+    <thingClass>HardMode.Buildings.Mineable</thingClass>
     <graphicPath>Things/Building/Linked/Rock_Atlas</graphicPath>
     <graphicClass>Graphic_Single</graphicClass>
     <linkDrawerType>CornerFiller</linkDrawerType>
@@ -115,7 +115,7 @@
 
 
   <ThingDef ParentName="RockBase">
-    <defName>NSMineableGold</defName>
+    <defName>MineableGold</defName>
     <label>gold ore</label>
     <graphicPath>Things/Building/Linked/RockFlecked_Atlas</graphicPath>
     <graphicClass>Graphic_Single</graphicClass>

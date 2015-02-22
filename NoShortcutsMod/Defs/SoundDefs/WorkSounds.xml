@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<SoundDefs>
+
+  <!-- no HardMode classes in this file -->
+
+  <SoundDef>
+    <defName>Interact_LaserToolUse_Start</defName>
+    <eventNames />
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Interaction/Repair/WeldStart</clipPath>
+          </li>
+        </grains>
+        <volumeRange>
+          <min>2</min>
+          <max>4</max>
+        </volumeRange>
+        <pitchRange>
+          <min>1.2</min>
+          <max>1.5</max>
+        </pitchRange>
+        <sustainLoopDurationRange>
+          <min>999</min>
+          <max>999</max>
+        </sustainLoopDurationRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+  
+  <SoundDef>
+    <defName>Interact_LaserToolUse</defName>
+    <sustain>True</sustain>
+    <eventNames />
+    <maxSimultaneous>4</maxSimultaneous>
+    <priorityMode>PrioritizeNearest</priorityMode>
+    <sustainStartSound>Interact_LaserToolUse_Start</sustainStartSound>
+    <subSounds>
+      <li>
+        <muteWhenPaused>True</muteWhenPaused>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Interaction/Repair/WeldLoop</clipPath>
+          </li>
+        </grains>
+        <volumeRange>
+          <min>4</min>
+          <max>7</max>
+        </volumeRange>
+        <pitchRange>
+          <min>1.2</min>
+          <max>1.8</max>
+        </pitchRange>
+        <sustainLoopDurationRange>
+          <min>2.391304</min>
+          <max>0.9782609</max>
+        </sustainLoopDurationRange>
+        <sustainIntervalRange>
+          <min>-0.3294118</min>
+          <max>-0.3294118</max>
+        </sustainIntervalRange>
+        <sustainAttack>0.05882355</sustainAttack>
+        <sustainRelease>0.075</sustainRelease>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+</SoundDefs>
