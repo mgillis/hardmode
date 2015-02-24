@@ -17,7 +17,7 @@
     <DebugSymbols>false</DebugSymbols>
     <DebugType>none</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>C:\Rimworld\RimWorld725Win\Mods\HardMode\</OutputPath>
+    <OutputPath>C:\Rimworld\RimWorld727Win\Mods\HardMode\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
