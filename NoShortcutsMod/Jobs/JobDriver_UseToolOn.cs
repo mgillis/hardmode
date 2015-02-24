@@ -5,6 +5,11 @@ using Verse.AI;
 
 namespace HardMode.Jobs
 {
+    /// <summary>
+    /// This can be used in any JobDef - all the real work happens in the WorkGiver / Verb.
+    /// 
+    /// Almost an exact copy of JobDriver_Kill
+    /// </summary>
     public class JobDriver_UseToolOn : JobDriver
     {
         protected virtual JobCondition ResultOfDespawnedTarget()

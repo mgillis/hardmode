@@ -4,6 +4,10 @@ using Verse;
 
 namespace HardMode.Buildings
 {
+    /// <summary>
+    /// This is here for any future buildings-with-a-fire-and-worktable-and-heat.
+    /// TODO this should be a Comp? if possible?
+    /// </summary>
     public class Building_FireBase : Building_WorkTable_HeatPush
     {
         #region copy-paste from campfire in alpha 9

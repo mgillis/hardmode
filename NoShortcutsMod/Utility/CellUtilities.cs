@@ -42,15 +42,12 @@ namespace HardMode.Utility
         {
             for (var squareRadius = radiusStep; squareRadius < maxRadius; squareRadius += radiusStep)
             {
-                Log.Message("searching with squareRadius " + squareRadius);
                 IntVec3 foundCell;
                 if (GenCellFinder.TryFindRandomMapCellNearWith(start, squareRadius, validator, out foundCell))
                 {
-                    Log.Message("found cell, returning");
                     return foundCell;
                 }
             }
-            Log.Message("nothing, returning Invalid");
             return IntVec3.Invalid;
 
         }

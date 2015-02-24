@@ -6,6 +6,11 @@ using Verse.Sound;
 
 namespace HardMode.Buildings
 {
+    /// <summary>
+    /// This is just a reproduction of RimWorld.Mineable. I thought at first that I'd need to 
+    /// make some changes here to get MineWithTool to work, but I didn't. So now it's just
+    /// here because .. it's here.
+    /// </summary>
     class Mineable : Building
     {
         // ReSharper disable once InconsistentNaming

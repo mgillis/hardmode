@@ -1,11 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ThinkTreeHooks>
   
+  <!--
+  This works, but colonists working in the dark pause between every job to get back into a lit tile, so ... I need to rework it.  
+  
   <ThinkTreeDef>
     <defName>InsertHookTest</defName>
     <insertTag>Humanoid_PreSatisfyNeeds</insertTag>
     <insertPriority>100</insertPriority>
     <thinkRoot Class="HardMode.Jobs.JobGiver_SeekLight" />
   </ThinkTreeDef>
+  -->
   
 </ThinkTreeHooks>

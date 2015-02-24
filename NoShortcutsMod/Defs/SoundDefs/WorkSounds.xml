@@ -3,6 +3,7 @@
 
   <!-- no HardMode classes in this file -->
 
+  <!-- these are copies of Repair noises but pitchshifted up a bit and quieter -->
   <SoundDef>
     <defName>Interact_LaserToolUse_Start</defName>
     <eventNames />

@@ -4,19 +4,19 @@ using Verse;
 
 namespace HardMode.Verbs
 {
+    /// <summary>
+    /// Create a child of this to implement a with-tool verb.
+    /// </summary>
     public abstract class Verb_UseTool : Verb
     {
         protected abstract int TicksToNextHit();
+        protected abstract void BeforeWork();
+        protected abstract void DoWork(TargetInfo target, out bool finished);
 
         protected override void InitCast()
         {
             BeforeWork();
             base.InitCast();
-        }
-
-        new public void VerbTick()
-        {
-            base.VerbTick();
         }
 
         protected override bool TryShotSpecialEffect()
@@ -29,9 +29,6 @@ namespace HardMode.Verbs
             DoWork(currentTarget, out finished);
             return !finished;
         }
-
-        protected abstract void BeforeWork();
-        protected abstract void DoWork(TargetInfo target, out bool finished);
 
     }
 }

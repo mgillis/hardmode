@@ -16,7 +16,6 @@ namespace HardMode.Utility
         {
             if (CellUtilities.EnumerateAdjacentCells(thing.Position).Any(c => c.InBounds() && c.Standable()))
             {
-                Log.Message("found any standable cell beside " + thing);
                 job = null;
                 return true;
             }
@@ -25,18 +24,17 @@ namespace HardMode.Utility
 
             if (impediment != null)
             {
-                Log.Message("impediment beside " + thing + " of " + impediment);
                 job = HaulAIUtility.HaulAsideJobFor(pawn, impediment);
                 return false;
             }
 
-            Log.Message("can't stand beside & no impediment haulable");
             job = null;
             return false;
         }
 
         /// <summary>
-        /// Might be null
+        /// Gets the specific instantation of a given verb on pawn's equipment.
+        /// Might be null, of course.
         /// </summary>
         public static Verb GetVerbOnEquipment(this Pawn pawn, System.Type verbType)
         {

@@ -1,13 +1,11 @@
 using System;
-using System.Runtime.InteropServices;
 using Verse;
-using Verse.AI;
 
 namespace HardMode.Utility
 {
     static class Extensions
     {
-        #region Designations
+        // Designation extensions
         public static Designation At(this DesignationDef def, IntVec3 position)
         {
             return Find.DesignationManager.DesignationAt(position, def);
@@ -27,9 +25,8 @@ namespace HardMode.Utility
         {
             return def.On(t) != null;
         }
-        #endregion
 
-        #region Glow
+        // Position - Glow extensions
         public static PsychGlow PsychGlowAt(this IntVec3 position)
         {
             return Find.GlowGrid.PsychGlowAt(position);
@@ -39,13 +36,12 @@ namespace HardMode.Utility
         {
             return PsychGlowAt(position) == PsychGlow.Dark;
         }
-        #endregion
 
-        #region Pawn
+        // Pawn extensions
         public static IntVec3 RandomCloseReachableSpotWith(this Pawn pawn, Predicate<IntVec3> validator, int maxRadius)
         {
             return CellUtilities.RandomCloseReachableSpotWith(pawn, validator, maxRadius);
         }
-        #endregion
+
     }
 }

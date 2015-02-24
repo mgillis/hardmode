@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
+  <!-- this is a copy of the Core map generator but with silver removed and tools in the scatter generators. -->
   <MapGeneratorDef>
     <defName>MainMapGenerator</defName>
     <genSteps>
@@ -109,8 +110,8 @@
         </thingDefs>
         <spotMustBeStandable>true</spotMustBeStandable>
         <groupSizeRange>
-          <min>3</min>
-          <max>3</max>
+          <min>2</min>
+          <max>2</max>
         </groupSizeRange>
         <stackCountRange>
           <min>1</min>
@@ -122,9 +123,6 @@
       <!-- Some final essentials -->
       <li Class="Genstep_Colonists" />
       <li Class="Genstep_Animals" />
-      
-      <!-- tools! -->
-      <li Class="HardMode.Gensteps.Genstep_Tools" />
 
     </genSteps>
   </MapGeneratorDef>

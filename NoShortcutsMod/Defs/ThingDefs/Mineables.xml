@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ThingDefs>
+  
+  <!-- copy of Mineables from Core, with thingClass changed -->
 
   <ThingDef Name="BuildingNaturalBase" Abstract="True">
     <category>Building</category>

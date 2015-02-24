@@ -10,6 +10,7 @@ namespace HardMode.Verbs
         private const int BaseDamagePerPickHit = 80;
         private int amount;
 
+        // XXX DEBUG
         new public void Notify_PickedUp()
         {
             Log.Warning(caster + " got " + ownerEquipment + " that spawned/notified a Verb_MineWithTool");

@@ -1,10 +1,6 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.Remoting.Messaging;
-using HardMode.Utility;
+﻿using HardMode.Utility;
 using HardMode.Verbs;
 using RimWorld;
-using UnityEngine;
 using Verse;
 using Verse.AI;
 
@@ -27,22 +23,11 @@ namespace HardMode.WorkGivers
             return false;
         }
 
-
-        //public override PathMode PathMode
-        //{
-        //    get { return PathMode.Touch; }
-        //}
-
         private static bool IsMiningResearched()
         {
             return true;
-            //return ResearchProjectDef.Named("Mining").IsFinished;
+            // XXX TESTING return ResearchProjectDef.Named("Mining").IsFinished;
         }
-
-        //public override IEnumerable<Thing> PotentialWorkThingsGlobal(Pawn pawn)
-        //{
-        //    return base.PotentialWorkThingsGlobal(pawn);
-        //}
 
         public override ThingRequest PotentialWorkThingRequest
         {
